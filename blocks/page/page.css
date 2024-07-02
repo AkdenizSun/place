@@ -1,0 +1,15 @@
+.page {
+  margin: 0 auto;
+  color: #fff;
+  max-width: 1280px;
+}
+
+
+@media (max-width:319px){
+
+  .page {
+    width: 320px;
+  }
+
+}
+

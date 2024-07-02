@@ -1,0 +1,14 @@
+.card {
+  display: grid;
+  position: relative;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: repeat(1fr, 2);
+  grid-template-areas:
+    "picture picture"
+    "text like";
+  width: 282px;
+  min-height: 361px;
+  background-color: #FFFFFF;
+  color:  #000000;
+  border-radius: 10px 10px 10px 10px;
+}

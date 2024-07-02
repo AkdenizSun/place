@@ -1,0 +1,14 @@
+.popup__form{
+  margin-left: 36px;
+  margin-right: 36px;
+}
+
+
+@media (max-width:640px){
+
+  .popup__form{
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+
+}

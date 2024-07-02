@@ -1,0 +1,15 @@
+.card__like-button{
+  grid-area: like;
+  background-color: #FFFFFF;
+  padding: 0;
+  width: 22px;
+  height: 19px;
+  cursor: pointer;
+  margin-top: 5px;
+  border: none;
+  background-image: url(../../../images/heart-disabled.svg);
+	background-size: contain;
+}
+.card__like-button:hover{
+  opacity: 0.6;
+}
