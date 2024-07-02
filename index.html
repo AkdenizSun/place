@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Место</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./page/index.css">
+</head>
+
+<body class="body">
+  <div class="page">
+    <header class="header">
+      <img class="header__logo" src="./images/header-logo.svg" alt="Россия">
+    </header>
+
+    <main class="content">
+
+      <section class="profile">
+        <img src="./images/Kusto.jpg" class="profile__avatar" alt="Аватар">
+        <div class="profile__info">
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button type="button" class="profile__edit-button"></button>
+          <p class="profile__about">Исследователь океана</p>
+        </div>
+        <button type="button" class="profile__add-button"></button>
+
+      </section>
+
+
+
+      <section class="gallery"></section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright">&copy; Place</p>
+    </footer>
+  </div>
+
+
+
+  <div class="popup popup_type_edit-profile">
+    <div class="popup__container">
+      <button type="button" class="popup__close"></button>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form name="profileForm" class="popup__form" novalidate>
+        <input id="profile-name" type="text" placeholder="Имя" name="profileName"
+          class="popup__text popup__text_type_name" required minlength="2" maxlength="40">
+
+        <span class="profile-name-error popup__text-error"></span>
+
+        <input id="profile-about" type="text" placeholder="Информация" name="profileAbout"
+          class="popup__text popup__text_type_about" required minlength="2" maxlength="200">
+
+        <span class="profile-about-error popup__text-error "></span>
+
+        <button type="submit" class="popup__save-button">Сохранить</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup popup_type_add-card">
+    <div class="popup__container">
+      <button type="button" class="popup__close"></button>
+      <h2 class="popup__title">Новое место</h2>
+      <form name="addCard" class="popup__form">
+        <input id="card-name" type="text" placeholder="Название" name="cardName"
+          class="popup__text popup__text_type_name" required minlength="2" maxlength="30">
+
+        <span class="card-name-error popup__text-error"></span>
+
+        <input id="card-url" type="url" placeholder="Ссылка на картинку" name="cardLink"
+          class="popup__text popup__text_type_link" required>
+
+        <span class="card-url-error popup__text-error"></span>
+
+        <button type="submit" class="popup__save-button">Создать</button>
+      </form>
+
+    </div>
+  </div>
+
+  <div class="popup popup_type_fullImage popup_type_image">
+    <div class="popup__image-container">
+      <img class="popup__image">
+      <button type="button" class="popup__close"></button>
+      <h2 class="popup__image-title"></h2>
+    </div>
+  </div>
+
+  <template id="card-template">
+    <div class="card">
+      <img class="card__picture">
+      <button type="button" class="card__trash-button"></button>
+      <p class="card__title"></p>
+      <button type="button" class="card__like-button"></button>
+    </div>
+  </template>
+  <script src="./scripts/Cards.js"></script>
+  <script type="module" src="./scripts/index.js"></script>
+
+</body>
+
+</html>
